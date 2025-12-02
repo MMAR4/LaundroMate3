@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotless Laundry Services</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%233b82f6' d='M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0z'/><path fill='%23ffffff' d='M160 192l32 32h128l32-32H160zM192 256v128h128V256H192z'/></svg>" type="image/svg+xml">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        // Initialize EmailJS immediately
+        // REPLACE 'YOUR_PUBLIC_KEY' WITH YOUR ACTUAL EMAILJS PUBLIC KEY
+        (function() {
+            emailjs.init('-EUSgMEXqIRr3SMUV');
+        })();
+    </script>
+</head>
+<body class="dark-theme">
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">Logo</div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#booking-section" class="nav-link">Services</a></li>
+                <li><a href="#about-us" class="nav-link">About Us</a></li>
+                <li><a href="#footer" class="nav-link">Contact Us</a></li>
+            </ul>
+            <div class="user-profile">
+                <span class="username">Username</span>
+            </div>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section section-spy">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Revitalize Your Clothes with Expert <span class="highlight">Laundry Services!</span></h1>
+                <p>From premium dry cleaning to swift wash and fold, we deliver care and convenience. Schedule a pickup and rediscover the freshness of your clothes today!</p>
+                <button class="btn btn-primary" onclick="scrollToBooking()">
+                    <i class="fas fa-calendar-alt"></i> Book a service today!
+                </button>
+            </div>
+            <div class="hero-image">
+                <img src="/img/pngegg.png" alt="Laundry Illustration">
+            </div>
+        </div>
+    </section>
+
+    <section class="achievements-section">
+        <div class="container achievements-container">
+            <h2>Our Achievements</h2>
+            <div class="achievement-stats">
+                <div class="stat-item">
+                    <h3>15+</h3>
+                    <p>Laundry Services</p>
+                </div>
+                <div class="stat-item">
+                    <h3>240+</h3>
+                    <p>Happy Customers</p>
+                </div>
+                <div class="stat-item">
+                    <h3>2+ Yrs</h3>
+                    <p>Experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking-section" class="booking-section section-spy">
+        <div class="container booking-container">
+            <div class="services-list-container">
+                <h2>Our Services</h2>
+                <p class="subtitle">Click On The Add To Cart Button To Add The Services To Your Cart</p>
+                <div id="services-container">
+                    </div>
+                <p class="info-text"><i class="fas fa-info-circle"></i> Add the items to the cart and book now</p>
+            </div>
+
+            <div class="cart-form-container">
+                <div class="cart-summary card">
+                    <h3>Added Items</h3>
+                    <div class="cart-header">
+                        <span>S.No</span>
+                        <span>Service Name</span>
+                        <span>Price</span>
+                    </div>
+                    
+                    <div id="cart-content-area">
+                        </div>
+
+                    <div class="cart-total">
+                        <span>Total Amount</span>
+                        <span id="total-price">₹0.00</span>
+                    </div>
+                </div>
+
+                <div class="booking-form card">
+                    <h3>Book Now</h3>
+                    <form id="bookingForm">
+                        <div class="input-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" placeholder="John Doe" required>
+                        </div>
+                        <div class="input-group two-col">
+                            <div>
+                                <label for="emailId">Email ID</label>
+                                <input type="email" id="emailId" placeholder="mail@id.com" required>
+                            </div>
+                            <div>
+                                <label for="phoneNumber">Phone Number</label>
+                                <input type="tel" id="phoneNumber" placeholder="0000000000" required>
+                            </div>
+                        </div>
+                        <!-- <button type="submit" class="btn btn-block">Book now</button> -->
+                        <form id="bookingForm">
+                          <button type="submit" class="btn btn-block">Book now</button>
+                          <div id="success-message" style="display: none; margin-top: 1rem; text-align: center;">
+                              </div>
+                          </form>
+
+                        <div id="success-message" style="display: none; margin-top: 1rem; text-align: center;">
+                            <p style="color: var(--success-color); font-weight: 600;">
+                                <i class="fas fa-check-circle"></i> Email Has been sent successfully
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-us" class="quality-section section-spy">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Why Choose Us</h2>
+            <div class="quality-grid">
+                <div class="quality-card">
+                    <i class="fas fa-tshirt"></i>
+                    <h3>Premium Services</h3>
+                    <p>Elevate your wardrobe with our meticulous dry cleaning, ensuring garments look and feel as good as new.</p>
+                </div>
+                <div class="quality-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>Quick Support</h3>
+                    <p>We're committed to providing prompt solutions to ensure your experience is smooth and worry-free.</p>
+                </div>
+                <div class="quality-card">
+                    <i class="fas fa-truck"></i>
+                    <h3>Hassle Free Delivery</h3>
+                    <p>Enjoy seamless service with our convenient pickup and delivery options, tailored to your schedule.</p>
+                </div>
+                <div class="quality-card">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <h3>Affordable Prices</h3>
+                    <p>Experience exceptional care without breaking the bank – our affordable prices make laundry day stress-free.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter-section">
+        <div class="container newsletter-container">
+            <h2>Subscribe to our newsletter.</h2>
+            <form class="newsletter-form">
+                <input type="text" placeholder="Full name">
+                <input type="email" placeholder="Email">
+                <button type="submit" class="btn btn-white">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <footer id="footer" class="section-spy">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>Logo</h3>
+                <h4>About us</h4>
+                <p>Lorem ipsum Dolor Sit Amet Consectetur. Sed Al Congue.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Important Links</h4>
+                <ul>
+                    <li><a href="#about-us">About us</a></li>
+                    <li><a href="#footer">Contact us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of use</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>mail@site.com</p>
+                <p>+91 94942 16618</p>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

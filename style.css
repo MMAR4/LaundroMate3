@@ -1,0 +1,538 @@
+/* --- Dark Theme Variables --- */
+:root {
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --bg-tertiary: #252525;
+    --bg-accent-dark: #1a2634; 
+    
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --text-muted: #777777;
+    
+--accent-color: #3b82f6;
+    --accent-hover: #2563eb;
+    --danger-color: #ef4444; /* Added/Ensured Red for Failure */
+    --danger-hover: #dc2626;
+    --success-color: #10b981; /* Green for Success */
+    
+    --border-color: #333333;
+}
+
+/* --- General Resets --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3, h4 {
+    color: var(--text-primary);
+}
+
+p {
+    color: var(--text-secondary);
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+ul {
+    list-style: none;
+}
+
+/* --- Buttons --- */
+.btn {
+    padding: 10px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-hover);
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 12px;
+    font-size: 1rem;
+}
+
+.btn-block:hover {
+    background-color: var(--accent-hover);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+.btn-outline.remove {
+    color: var(--danger-color);
+    border-color: var(--danger-color);
+}
+.btn-outline.remove:hover {
+     background-color: var(--danger-color);
+     color: white;
+}
+
+.btn-white {
+    background-color: white;
+    color: var(--accent-color);
+}
+.btn-white:hover {
+    background-color: #f0f0f0;
+}
+
+.highlight {
+    color: var(--accent-color);
+}
+
+/* --- Navbar --- */
+.navbar {
+    background-color: var(--bg-primary);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--accent-color);
+}
+
+.user-profile {
+    background-color: var(--bg-secondary);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    /* KEY CHANGE: Full screen height (minus approx navbar height if needed, but 100vh is standard for professional hero) */
+    min-height: 100vh;
+    display: flex;
+    align-items: center; /* Vertically center content */
+    padding: 40px 0; /* Padding to prevent content hitting edges on small screens */
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.hero-content {
+    flex: 0 0  55%;
+    max-width: 55%;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem; /* Made slightly larger for professional feel */
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 500px;
+}
+
+.hero-image {
+    flex: 0 0 40%;
+    max-width: 40%;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    max-height: 500px;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+    
+}
+
+/* --- Achievements Section --- */
+.achievements-section {
+    background-color: var(--bg-accent-dark); 
+    padding: 60px 0;
+    color: white;
+}
+
+.achievements-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.achievement-stats {
+    display: flex;
+    gap: 4rem;
+}
+
+.stat-item h3 {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+    color: #e0e0e0;
+    font-weight: 500;
+}
+
+/* --- Quality Description Section --- */
+.quality-section {
+    padding: 80px 0;
+}
+
+.quality-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.quality-card i {
+    font-size: 3rem;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    background-color: var(--bg-secondary);
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.quality-card h3 {
+    margin-bottom: 1rem;
+}
+
+/* --- Booking Services Section --- */
+.booking-section {
+    padding: 80px 0;
+    background-color: var(--bg-secondary);
+}
+
+.booking-container {
+    display: flex;
+    gap: 3rem;
+}
+
+/* Left Div - Services List */
+.services-list-container {
+    flex: 1.2;
+    background-color: var(--bg-primary);
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+.subtitle {
+    margin-bottom: 2rem;
+}
+
+.service-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.service-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.service-info i {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    width: 30px;
+    text-align: center;
+}
+
+.service-price {
+    color: var(--accent-color);
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.info-text {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+/* Right Div - Cart & Form */
+.cart-form-container {
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card {
+    background-color: var(--bg-primary);
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+/* Cart Styles */
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem 0 1rem 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+.cart-header span:nth-child(2) { flex-grow: 1; margin-left: 1rem;}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.95rem;
+}
+.cart-item .item-name { flex-grow: 1; margin-left: 1rem;}
+
+/* Empty State Styling */
+.empty-cart-state {
+    text-align: center;
+    padding: 2rem 0;
+    color: var(--text-secondary);
+}
+.empty-cart-state i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--text-muted);
+}
+.empty-cart-state h4 {
+    margin-bottom: 0.5rem;
+}
+.empty-cart-state p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+/* Form Styles */
+.booking-form h3 {
+    margin-bottom: 1.5rem;
+}
+
+.input-group {
+    margin-bottom: 1.2rem;
+}
+
+.two-col {
+    display: flex;
+    gap: 1rem;
+}
+.two-col > div { flex: 1; }
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+    outline: none;
+}
+input:focus {
+    border-color: var(--accent-color);
+}
+::placeholder {
+    color: var(--text-muted);
+}
+
+
+/* --- Newsletter Section --- */
+.newsletter-section {
+    background-color: var(--bg-accent-dark);
+    padding: 80px 0;
+    text-align: center;
+    color: white;
+}
+
+.newsletter-container h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.newsletter-form input {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.1); 
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+}
+.newsletter-form input::placeholder { color: rgba(255,255,255,0.6); }
+
+/* --- Footer --- */
+footer {
+    background-color: var(--bg-primary);
+    padding: 60px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+}
+
+.footer-col h3, .footer-col h4 {
+    margin-bottom: 1.2rem;
+}
+
+.footer-col ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-col ul li a {
+    color: var(--text-secondary);
+    transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: var(--accent-color);
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+}
+.social-icons a:hover { color: var(--accent-color); }
+
+
+/* --- Media Queries --- */
+@media (max-width: 900px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+    }
+    .hero-content p { margin: 0 auto 2rem auto; }
+    
+    .achievements-container {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+    .booking-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links { display: none; } 
+    .hamburger { display: block; }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+    .newsletter-form input, .newsletter-form button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .two-col {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+    .hero-content h1 { font-size: 2.2rem; }
+}
