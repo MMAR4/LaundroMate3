@@ -5,15 +5,15 @@ https://laundromate3.netlify.app/
 
 ## ✨ Project Overview
 
-LaundroMate is a modern, single-page web application designed to allow customers to easily browse and book laundry and dry-cleaning services online. The project focuses on a clean, responsive **Dark Theme** interface and robust frontend logic, simulating a real-world e-commerce booking experience.
+LaundroMate is a modern, single page web application designed to allow customers to easily browse and book laundry and dry cleaning services online. The project focuses on a clean, responsive **Dark Theme** interface and robust frontend logic, simulating a real world e-commerce booking experience.
 
-The core challenge involved implementing dynamic shopping cart functionality purely with **Vanilla JavaScript** and integrating a third-party email service for reliable booking confirmation without a dedicated backend server.
+The core challenge involved implementing dynamic shopping cart functionality purely with **Vanilla JavaScript** and integrating a third party email service for reliable booking confirmation without a dedicated backend server.
 
 ## 🚀 Key Features
 
 * **Dynamic Cart Logic (Vanilla JS):** Services can be added and removed dynamically, with an automatic calculation and display of the running **Grand Total**.
 * **Booking Confirmation via EmailJS:** Integrates with EmailJS to securely send booking details (customer info, services, and total cost) to the service provider's inbox upon submission.
-* **Modern Dark Theme:** A visually appealing dark-mode design implemented using CSS custom properties (`:root` variables) for easy customization.
+* **Modern Dark Theme:** A visually appealing dark mode design implemented using CSS custom properties (`:root` variables) for easy customization.
 * **Responsive Design:** Fully optimized for seamless viewing and interaction across desktop, tablet, and mobile devices.
 * **Scroll Spy Navigation:** The header navigation highlights the current active section as the user scrolls down the page.
 * **Form Validation:** Basic input validation ensures all necessary fields are filled before attempting the booking submission.
