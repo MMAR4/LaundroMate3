@@ -1,5 +1,8 @@
 # 🧺 Spotless Laundry Services (LaundroMate)
 
+## Live Demo
+https://laundromate3.netlify.app/
+
 ## ✨ Project Overview
 
 LaundroMate is a modern, single-page web application designed to allow customers to easily browse and book laundry and dry-cleaning services online. The project focuses on a clean, responsive **Dark Theme** interface and robust frontend logic, simulating a real-world e-commerce booking experience.
